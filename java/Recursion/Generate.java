@@ -2,7 +2,7 @@ package Recursion;
 
 public class Generate {
     public static void main(String[] args) {
-        generate("","abc",0);
+        generate("","abc");
     }
     private static void generate(String output,String input){
 
@@ -11,7 +11,7 @@ public class Generate {
             return;
         }
 
-        generate(output+input.charAt(1),input.substring(1));
+        generate(output+input.charAt(0),input.substring(1));
 
         generate(output,input.substring(1));
     }
